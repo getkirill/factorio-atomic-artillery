@@ -38,8 +38,9 @@ artillery_atomic_rocket.chart_picture = {
 
 local atomic_artillery_shell = table.deepcopy(data.raw["ammo"]["artillery-shell"])
 atomic_artillery_shell.name = "atomic-artillery-shell"
-atomic_artillery_shell.icon = nil
-atomic_artillery_shell.icons = {{
+atomic_artillery_shell.icon = "__kraskaska-atomic-artillery__/atomic-artillery-shell.png"
+
+--[[atomic_artillery_shell.icons = {{
     icon = "__base__/graphics/icons/artillery-shell.png",
     tint = {
         r = 0.5,
@@ -47,7 +48,8 @@ atomic_artillery_shell.icons = {{
         b = 0.5,
         a = 1
     }
-}}
+}}]]
+
 atomic_artillery_shell.ammo_type.action.action_delivery.projectile = "atomic-artillery-projectile"
 local atomic_artillery_shell_recipe = {
     type = 'recipe',
@@ -96,7 +98,7 @@ local atomic_artillery_tech = {
     name = "atomic-artillery",
     icon_size = 64,
     icon_mipmaps = 4,
-    icons = {{
+    --[[icons = {{
         icon = "__base__/graphics/icons/artillery-shell.png",
         tint = {
             r = 0.5,
@@ -104,7 +106,8 @@ local atomic_artillery_tech = {
             b = 0.5,
             a = 1
         }
-    }},
+    }},]]
+    icon = "__kraskaska-atomic-artillery__/atomic-artillery-shell.png",
     prerequisites = {"adhesive-tape", "atomic-bomb", "artillery"},
     effects = {{
         type = "unlock-recipe",
